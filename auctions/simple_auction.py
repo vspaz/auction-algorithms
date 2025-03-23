@@ -4,17 +4,21 @@ from typing import List, Union
 class SimpleAuction:
 
     @staticmethod
-    def get_first_price_auction_utility(bidder_valuation: Union[int, float],
-                                        bidder_bid: Union[int, float],
-                                        winning_bid: Union[int, float]) -> int:
+    def get_first_price_auction_utility(
+        bidder_valuation: Union[int, float],
+        bidder_bid: Union[int, float],
+        winning_bid: Union[int, float],
+    ) -> int:
         if bidder_bid == winning_bid:
             return bidder_valuation - bidder_bid
         return 0
 
     @staticmethod
-    def get_second_price_auction_utility(bidder_valuation: Union[int, float],
-                                         second_highest_bid: Union[int, float],
-                                         winning_bid: Union[int, float]) -> int:
+    def get_second_price_auction_utility(
+        bidder_valuation: Union[int, float],
+        second_highest_bid: Union[int, float],
+        winning_bid: Union[int, float],
+    ) -> int:
         if bidder_valuation == winning_bid:
             return bidder_valuation - second_highest_bid
         return 0
