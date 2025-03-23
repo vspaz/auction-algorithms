@@ -6,11 +6,11 @@ class SimpleAuction:
     @staticmethod
     def get_first_price_auction_utility(
         bidder_valuation: Union[int, float],
-        bidder_bid: Union[int, float],
+        bid: Union[int, float],
         winning_bid: Union[int, float],
     ) -> int:
-        if bidder_bid == winning_bid:
-            return bidder_valuation - bidder_bid
+        if bid == winning_bid:
+            return bidder_valuation - bid
         return 0
 
     @staticmethod
